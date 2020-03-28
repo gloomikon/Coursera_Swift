@@ -21,8 +21,8 @@ class CustomFlowLayout: UICollectionViewLayout {
 
         let columnWidth = (UIScreen.main.bounds.width - 48 ) / 2
 
-        let xOffset: [CGFloat] = [16, 32 + columnWidth] // Offset for every column
-        var yOffset: [CGFloat] = .init(repeating: -16.0, count: numberOfColumns)  // Offset for every row
+        let xOffset: [CGFloat] = [16, 32 + columnWidth]
+        var yOffset: [CGFloat] = [-16, -16]
         var column = 0
         var column0MaxHeight: CGFloat = 0
         var columm1MaxHeight: CGFloat = 0
@@ -31,9 +31,9 @@ class CustomFlowLayout: UICollectionViewLayout {
             let indexPath = IndexPath(item: item, section: 0)
             let itemAttributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
 
-            let currentItemHeight: CGFloat = (item == 0) ? 300 : 200
+            let columnHeight: CGFloat = (item == 0) ? 300 : 200
 
-            itemAttributes.frame = CGRect(x: xOffset[column], y: yOffset[column] + 16, width: columnWidth, height: currentItemHeight)
+            itemAttributes.frame = CGRect(x: xOffset[column], y: yOffset[column] + 16, width: columnWidth, height: columnHeight)
 
             let currentYOffset = 16 + itemAttributes.frame.size.height
 
