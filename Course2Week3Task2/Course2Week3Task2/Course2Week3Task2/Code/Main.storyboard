@@ -51,14 +51,14 @@
                                 <rect key="frame" x="60" y="269" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewLayout key="collectionViewLayout" id="M11-us-LR3" customClass="CustomFlowLayout" customModule="Course2Week3Task2" customModuleProvider="target"/>
+                                <collectionViewLayout key="collectionViewLayout" id="ZHQ-Ek-245" customClass="CustomFlowLayout" customModule="Course2Week3Task2" customModuleProvider="target"/>
                                 <cells/>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="photosCollectionView" destination="9iO-j8-GaV" id="KON-8l-PbF"/>
+                        <outlet property="collectionView" destination="9iO-j8-GaV" id="dJc-Tz-hA3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aio-ft-aeO" userLabel="First Responder" sceneMemberID="firstResponder"/>

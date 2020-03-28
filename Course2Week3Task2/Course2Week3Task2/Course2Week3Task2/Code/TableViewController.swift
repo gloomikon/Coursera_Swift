@@ -22,7 +22,7 @@ class TableViewController: UIViewController {
 
     private var photos: [Photo] = []
     private var photoProvider: PhotoProvider?
-    private let cellIdentifier = "photoCell"
+    private let cellIdentifier = String(describing: UITableViewCell.self)
 
     // MARK: - Life cycle
 
