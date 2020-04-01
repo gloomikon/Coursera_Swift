@@ -43,6 +43,7 @@ class CABasicAnimationController: UIViewController {
         animation.duration = 1.0
         animation.fromValue = orangeView.layer.cornerRadius
         animation.toValue = value
+        animation.timingFunction = CAMediaTimingFunction(name: .easeOut)
         orangeView.layer.add(animation, forKey: nil)
         orangeView.layer.cornerRadius = value
     }
@@ -95,7 +96,7 @@ class CABasicAnimationController: UIViewController {
         groupAnimation.autoreverses = true
         groupAnimation.isRemovedOnCompletion = false
         groupAnimation.fillMode = .forwards
-        groupAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        groupAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         greenView.layer.add(groupAnimation, forKey: nil)
     }
 }
