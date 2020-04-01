@@ -37,12 +37,12 @@ class CAKeyframeAnimationController: UIViewController {
         let const = passcodeTextField.center.x
         let xPositions = [0 + const, 10 + const, -10 + const, 10 + const, -5 + const, 5 + const, -5 + const, 0 + const]
         let timeFrames: [NSNumber] = [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.8, 1]
-        let shakeIt = CAKeyframeAnimation(keyPath: "position.x")
-        shakeIt.values = xPositions
-        shakeIt.keyTimes = timeFrames
-        shakeIt.duration = 0.4
+        let animation = CAKeyframeAnimation(keyPath: "position.x")
+        animation.values = xPositions
+        animation.keyTimes = timeFrames
+        animation.duration = 0.4
 
-        passcodeTextField.layer.add(shakeIt, forKey: nil)
+        passcodeTextField.layer.add(animation, forKey: nil)
     }
 
     private func sinAnimation() {
