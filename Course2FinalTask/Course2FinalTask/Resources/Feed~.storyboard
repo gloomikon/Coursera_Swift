@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0SZ-yH-pfZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed-->
+        <scene sceneID="zpI-Rx-JXN">
+            <objects>
+                <viewController id="tFr-Rv-wV1" customClass="FeedViewController" customModule="Course2FinalTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JbE-Kn-4SS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tia-9l-o36">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Eml-VC-z6f" customClass="FeedCell" customModule="Course2FinalTask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eml-VC-z6f" id="x5e-nL-GOc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tia-9l-o36" firstAttribute="leading" secondItem="D1u-VV-jPr" secondAttribute="leading" id="GZn-HS-6P6"/>
+                            <constraint firstItem="D1u-VV-jPr" firstAttribute="bottom" secondItem="tia-9l-o36" secondAttribute="bottom" id="Z1t-fh-4o5"/>
+                            <constraint firstItem="D1u-VV-jPr" firstAttribute="trailing" secondItem="tia-9l-o36" secondAttribute="trailing" id="jzq-tb-e6F"/>
+                            <constraint firstItem="tia-9l-o36" firstAttribute="top" secondItem="JbE-Kn-4SS" secondAttribute="top" id="pTL-LO-LfB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D1u-VV-jPr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="feed" id="Zk9-th-D0K"/>
+                    <connections>
+                        <outlet property="tableView" destination="tia-9l-o36" id="eHf-XG-Tyq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ODQ-ng-PtS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085.5072463768117" y="45.535714285714285"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="gbw-bM-gqX">
+            <objects>
+                <viewController id="3b6-up-zUY" customClass="ProfileViewController" customModule="Course2FinalTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3t5-cd-nZI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="8na-7A-dEr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="9ho-zW-1a1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZW9-we-VRe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="843"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4bg-T3-nk3">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0SZ-yH-pfZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qoq-pf-icT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tFr-Rv-wV1" kind="relationship" relationship="viewControllers" id="urA-75-G2h"/>
+                        <segue destination="3b6-up-zUY" kind="relationship" relationship="viewControllers" id="i0S-cx-N7c"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDL-hT-Gzo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128" y="388"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="feed" width="25" height="25"/>
+        <image name="profile" width="25" height="25"/>
+    </resources>
+</document>
