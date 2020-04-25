@@ -36,8 +36,9 @@ class ListViewController: UIViewController {
 
     var postId: Post.Identifier!
     var userId: User.Identifier!
-    var userToDisplayId: User.Identifier!
     var destiny: ListViewControllerDestiny!
+
+    private var userToDisplayId: User.Identifier!
     private var usersToDisplay: [User]?
     private let cellIdentifier = String(describing: ListTableViewCell.self)
 
