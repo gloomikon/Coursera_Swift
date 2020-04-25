@@ -28,8 +28,8 @@ class FeedViewController: UIViewController {
 
     private var posts: [Post] = []
     private let cellId = String(describing: FeedCell.self)
-    private var userId: DataProvider.User.Identifier!
-    private var postId: DataProvider.Post.Identifier!
+    private var userId: User.Identifier!
+    private var postId: Post.Identifier!
 
     // MARK: - Life cycle
 
@@ -47,7 +47,8 @@ class FeedViewController: UIViewController {
             let vc = segue.destination as! ProfileViewController
             vc.userId = userId
         case Constant.showLikesListSegueID:
-            let vc = segue.destination as! LikesViewController
+            let vc = segue.destination as! ListViewController
+            vc.destiny = .likes
             vc.postId = postId
         default:
             break

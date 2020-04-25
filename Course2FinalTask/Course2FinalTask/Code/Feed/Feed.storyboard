@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="1730" y="-62"/>
         </scene>
-        <!--Likes-->
+        <!--List-->
         <scene sceneID="3vP-x3-7Kq">
             <objects>
-                <viewControllerPlaceholder storyboardName="Likes" id="9tK-Ty-i3a" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="List" id="9tK-Ty-i3a" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hQw-QG-obA"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sta-E1-bX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

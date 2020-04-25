@@ -11,8 +11,10 @@
 		7484B05520441FD000BDE1A6 /* DataProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7484B05320441FD000BDE1A6 /* DataProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		74B79258202B3254006BCB41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B79257202B3254006BCB41 /* AppDelegate.swift */; };
 		74B7925F202B3254006BCB41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74B7925E202B3254006BCB41 /* Assets.xcassets */; };
-		7729E8172454250E00BA0A52 /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7729E8162454250E00BA0A52 /* LikesViewController.swift */; };
-		7729E8192454254F00BA0A52 /* Likes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7729E8182454254F00BA0A52 /* Likes.storyboard */; };
+		7729E8172454250E00BA0A52 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7729E8162454250E00BA0A52 /* ListViewController.swift */; };
+		7729E8192454254F00BA0A52 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7729E8182454254F00BA0A52 /* List.storyboard */; };
+		7729E81C245437B500BA0A52 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7729E81B245437B500BA0A52 /* ListTableViewCell.swift */; };
+		7729E81E245437F200BA0A52 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7729E81D245437F200BA0A52 /* ListTableViewCell.xib */; };
 		777D0723244DBCA20076617A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777D0722244DBCA20076617A /* Main.storyboard */; };
 		777D0725244DBD310076617A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D0724244DBD310076617A /* FeedViewController.swift */; };
 		777D0727244DBD3A0076617A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D0726244DBD3A0076617A /* ProfileViewController.swift */; };
@@ -43,8 +45,10 @@
 		74B79257202B3254006BCB41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74B7925E202B3254006BCB41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74B79263202B3254006BCB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7729E8162454250E00BA0A52 /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
-		7729E8182454254F00BA0A52 /* Likes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Likes.storyboard; sourceTree = "<group>"; };
+		7729E8162454250E00BA0A52 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		7729E8182454254F00BA0A52 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		7729E81B245437B500BA0A52 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		7729E81D245437F200BA0A52 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		777D0722244DBCA20076617A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		777D0724244DBD310076617A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		777D0726244DBD3A0076617A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +101,7 @@
 		74B7927B202B3427006BCB41 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				7729E815245424FA00BA0A52 /* Likes */,
+				7729E815245424FA00BA0A52 /* List */,
 				777D0776244DF0E30076617A /* Profile */,
 				777D076A244DC2630076617A /* Feed */,
 				74B79257202B3254006BCB41 /* AppDelegate.swift */,
@@ -123,13 +127,23 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7729E815245424FA00BA0A52 /* Likes */ = {
+		7729E815245424FA00BA0A52 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				7729E8162454250E00BA0A52 /* LikesViewController.swift */,
-				7729E8182454254F00BA0A52 /* Likes.storyboard */,
+				7729E81A2454378F00BA0A52 /* Cell */,
+				7729E8162454250E00BA0A52 /* ListViewController.swift */,
+				7729E8182454254F00BA0A52 /* List.storyboard */,
 			);
-			path = Likes;
+			path = List;
+			sourceTree = "<group>";
+		};
+		7729E81A2454378F00BA0A52 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7729E81B245437B500BA0A52 /* ListTableViewCell.swift */,
+				7729E81D245437F200BA0A52 /* ListTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		777D076A244DC2630076617A /* Feed */ = {
@@ -224,9 +238,10 @@
 				777D0778244DF0F30076617A /* Profile.storyboard in Resources */,
 				777D0774244DE13B0076617A /* Feed.storyboard in Resources */,
 				777D0769244DC0FB0076617A /* Launchscreen.storyboard in Resources */,
-				7729E8192454254F00BA0A52 /* Likes.storyboard in Resources */,
+				7729E8192454254F00BA0A52 /* List.storyboard in Resources */,
 				74B7925F202B3254006BCB41 /* Assets.xcassets in Resources */,
 				777D0723244DBCA20076617A /* Main.storyboard in Resources */,
+				7729E81E245437F200BA0A52 /* ListTableViewCell.xib in Resources */,
 				777D0772244DCFB20076617A /* FeedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,8 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7729E81C245437B500BA0A52 /* ListTableViewCell.swift in Sources */,
 				777D0727244DBD3A0076617A /* ProfileViewController.swift in Sources */,
-				7729E8172454250E00BA0A52 /* LikesViewController.swift in Sources */,
+				7729E8172454250E00BA0A52 /* ListViewController.swift in Sources */,
 				777D0771244DCFB20076617A /* FeedCell.swift in Sources */,
 				777D0725244DBD310076617A /* FeedViewController.swift in Sources */,
 				74B79258202B3254006BCB41 /* AppDelegate.swift in Sources */,

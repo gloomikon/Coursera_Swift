@@ -10,11 +10,11 @@ import UIKit
 import DataProvider
 
 protocol FeedCellDelagate: class {
-    func handleAuthorUsernameTap(id: DataProvider.User.Identifier)
-    func handleAuthorAvatarTap(id: DataProvider.User.Identifier)
-    func handleLikeButtonTap(id: DataProvider.Post.Identifier)
-    func handleLikesCountLabelTap(id: DataProvider.Post.Identifier)
-    func handlePostDoubleTap(id: DataProvider.Post.Identifier)
+    func handleAuthorUsernameTap(id: User.Identifier)
+    func handleAuthorAvatarTap(id: User.Identifier)
+    func handleLikeButtonTap(id: Post.Identifier)
+    func handleLikesCountLabelTap(id: Post.Identifier)
+    func handlePostDoubleTap(id: Post.Identifier)
 }
 
 class FeedCell: UITableViewCell {
@@ -65,8 +65,8 @@ class FeedCell: UITableViewCell {
     // MARK: - Properties
 
     weak var delegate: FeedCellDelagate?
-    private var authorId: DataProvider.User.Identifier?
-    private var postId: DataProvider.Post.Identifier?
+    private var authorId: User.Identifier?
+    private var postId: Post.Identifier?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -75,6 +75,8 @@ class FeedCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+
+    // MARK: - Configure
 
     func configure(with post: Post) {
         authorAvatar.image = post.authorAvatar
