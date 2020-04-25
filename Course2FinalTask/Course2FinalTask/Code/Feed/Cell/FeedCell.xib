@@ -65,11 +65,18 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigLike" translatesAutoresizingMaskIntoConstraints="NO" id="EiX-Zg-x0t">
+                        <rect key="frame" x="110" y="161" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="EiX-Zg-x0t" secondAttribute="height" multiplier="1:1" id="hL3-q1-1gL"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="2A8-vO-LuS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="8yS-Uc-cy8"/>
                     <constraint firstItem="4iP-VY-WPz" firstAttribute="leading" secondItem="fpe-Xo-1Th" secondAttribute="trailing" constant="8" id="9qa-Rd-FYX"/>
                     <constraint firstItem="fpe-Xo-1Th" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="D1R-mm-vOI"/>
+                    <constraint firstItem="EiX-Zg-x0t" firstAttribute="centerX" secondItem="4B5-0t-qLh" secondAttribute="centerX" id="RxG-JV-nzJ"/>
                     <constraint firstItem="FeI-5L-F0q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="SET-fC-ZqX"/>
                     <constraint firstItem="4iP-VY-WPz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="UNh-nN-ZXp"/>
                     <constraint firstAttribute="trailing" secondItem="FeI-5L-F0q" secondAttribute="trailing" constant="15" id="bkc-4M-Ffm"/>
@@ -83,6 +90,7 @@
                     <constraint firstItem="fge-dg-DPN" firstAttribute="leading" secondItem="fpe-Xo-1Th" secondAttribute="trailing" constant="8" id="ju9-DV-Ajt"/>
                     <constraint firstItem="4B5-0t-qLh" firstAttribute="top" secondItem="fpe-Xo-1Th" secondAttribute="bottom" constant="8" id="mw8-fc-Nr3"/>
                     <constraint firstItem="AFy-eQ-ooB" firstAttribute="top" secondItem="4B5-0t-qLh" secondAttribute="bottom" id="oFt-9w-YY4"/>
+                    <constraint firstItem="EiX-Zg-x0t" firstAttribute="centerY" secondItem="4B5-0t-qLh" secondAttribute="centerY" id="t1U-s3-Ptc"/>
                     <constraint firstItem="2A8-vO-LuS" firstAttribute="centerY" secondItem="AFy-eQ-ooB" secondAttribute="centerY" id="ybV-n0-7Pg"/>
                 </constraints>
             </tableViewCellContentView>
@@ -90,6 +98,7 @@
             <connections>
                 <outlet property="authorAvatar" destination="fpe-Xo-1Th" id="9n8-0j-NJi"/>
                 <outlet property="authorUsernameLabel" destination="4iP-VY-WPz" id="nXR-kr-4Hi"/>
+                <outlet property="bigLikeImageView" destination="EiX-Zg-x0t" id="Eh4-sm-Zg9"/>
                 <outlet property="createdTimeLabel" destination="fge-dg-DPN" id="vgO-QD-usU"/>
                 <outlet property="likeButton" destination="AFy-eQ-ooB" id="aaq-1X-t8B"/>
                 <outlet property="likedByCountLabel" destination="2A8-vO-LuS" id="Qbh-Cc-4W8"/>
@@ -100,6 +109,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="bigLike" width="100" height="100"/>
         <image name="like" width="25" height="25"/>
     </resources>
 </document>

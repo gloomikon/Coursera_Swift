@@ -37,6 +37,12 @@ class FeedCell: UITableViewCell {
 
     @IBOutlet private var createdTimeLabel: UILabel!
 
+    @IBOutlet var bigLikeImageView: UIImageView! {
+        didSet {
+            bigLikeImageView.alpha = 0
+        }
+    }
+
     @IBOutlet private var postImage: UIImageView! {
         didSet {
             let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(postDoubleTapped))
@@ -114,6 +120,18 @@ class FeedCell: UITableViewCell {
             return
         }
 
+        UIView.animate(withDuration: 0.1,
+                       delay: 0.0,
+                       options: [.curveLinear],
+                       animations: { self.bigLikeImageView.alpha = 1.0 },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.3,
+                                       delay: 0.2,
+                                       options: [.curveEaseOut],
+                                       animations: { self.bigLikeImageView.alpha = 0.0 },
+                                       completion: nil)
+        })
+
         delegate?.handlePostDoubleTap(id: id)
     }
 
@@ -126,7 +144,7 @@ class FeedCell: UITableViewCell {
     }
 }
 
-extension DateFormatter {
+fileprivate extension DateFormatter {
     static func postDateString(from date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium

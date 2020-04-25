@@ -10,6 +10,10 @@ import UIKit
 import DataProvider
 
 class FeedViewController: UIViewController {
+    private struct Constant {
+        static let showAuthorProfileSegueID = "showAuthorProfile"
+        static let showLikesListSegueID = "showLikesList"
+    }
 
     //MARK: - IBOutlets
 
@@ -24,14 +28,13 @@ class FeedViewController: UIViewController {
 
     private var posts: [Post] = []
     private let cellId = String(describing: FeedCell.self)
-    private var userId: DataProvider.User.Identifier?
-
+    private var userId: DataProvider.User.Identifier!
+    private var postId: DataProvider.Post.Identifier!
 
     // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.title = "Feed"
 
         posts = DataProviders.shared.postsDataProvider.feed()
         tableView.register(UINib(nibName: "FeedCell", bundle: nil), forCellReuseIdentifier: cellId)
@@ -40,16 +43,23 @@ class FeedViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         hidesBottomBarWhenPushed = false
         switch segue.identifier {
-        case "showAuthorProfile":
+        case Constant.showAuthorProfileSegueID:
             let vc = segue.destination as! ProfileViewController
-            vc.userId = userId!
+            vc.userId = userId
+        case Constant.showLikesListSegueID:
+            let vc = segue.destination as! LikesViewController
+            vc.postId = postId
         default:
             break
         }
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension FeedViewController: UITableViewDelegate { }
+
+// MARK: - UITableViewDataSource
 
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,15 +74,17 @@ extension FeedViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - FeedCellDelagate
+
 extension FeedViewController: FeedCellDelagate {
     func handleAuthorUsernameTap(id: User.Identifier) {
         userId = id
-        performSegue(withIdentifier: "showAuthorProfile", sender: self)
+        performSegue(withIdentifier: Constant.showAuthorProfileSegueID, sender: self)
     }
 
     func handleAuthorAvatarTap(id: User.Identifier) {
         userId = id
-        performSegue(withIdentifier: "showAuthorProfile", sender: self)
+        performSegue(withIdentifier: Constant.showAuthorProfileSegueID, sender: self)
     }
 
     func handleLikeButtonTap(id: Post.Identifier) {
@@ -82,8 +94,8 @@ extension FeedViewController: FeedCellDelagate {
     }
 
     func handleLikesCountLabelTap(id: Post.Identifier) {
-        // TODO
-        print("handleLikesCountLabelTap")
+        postId = id
+        performSegue(withIdentifier: Constant.showLikesListSegueID, sender: self)
     }
 
     func handlePostDoubleTap(id: Post.Identifier) {

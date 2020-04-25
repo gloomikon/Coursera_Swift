@@ -33,6 +33,7 @@
                     <connections>
                         <outlet property="tableView" destination="tia-9l-o36" id="eHf-XG-Tyq"/>
                         <segue destination="HZu-sn-KKa" kind="show" identifier="showAuthorProfile" id="uYt-PX-ZsP"/>
+                        <segue destination="9tK-Ty-i3a" kind="show" identifier="showLikesList" id="QhI-AH-T1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODQ-ng-PtS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -48,6 +49,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eoj-Gr-M40" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1730" y="-62"/>
+        </scene>
+        <!--Likes-->
+        <scene sceneID="3vP-x3-7Kq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Likes" id="9tK-Ty-i3a" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hQw-QG-obA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sta-E1-bX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="163"/>
         </scene>
     </scenes>
 </document>
