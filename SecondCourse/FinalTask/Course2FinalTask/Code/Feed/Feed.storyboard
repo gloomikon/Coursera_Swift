@@ -15,23 +15,10 @@
                     <view key="view" contentMode="scaleToFill" id="JbE-Kn-4SS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tia-9l-o36">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="tia-9l-o36" firstAttribute="top" secondItem="JbE-Kn-4SS" secondAttribute="top" id="0uS-1t-UcI"/>
-                            <constraint firstItem="tia-9l-o36" firstAttribute="leading" secondItem="D1u-VV-jPr" secondAttribute="leading" id="6Qp-ZT-Wlk"/>
-                            <constraint firstItem="tia-9l-o36" firstAttribute="trailing" secondItem="D1u-VV-jPr" secondAttribute="trailing" id="8LF-kK-Xi9"/>
-                            <constraint firstAttribute="bottom" secondItem="tia-9l-o36" secondAttribute="bottom" id="FrK-tM-Gl0"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="D1u-VV-jPr"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="tia-9l-o36" id="eHf-XG-Tyq"/>
                         <segue destination="HZu-sn-KKa" kind="show" identifier="showAuthorProfile" id="uYt-PX-ZsP"/>
                         <segue destination="9tK-Ty-i3a" kind="show" identifier="showLikesList" id="QhI-AH-T1w"/>
                     </connections>
