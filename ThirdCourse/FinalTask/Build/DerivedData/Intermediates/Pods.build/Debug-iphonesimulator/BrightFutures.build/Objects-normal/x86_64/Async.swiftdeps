@@ -1,0 +1,397 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Async"
+provides-nominal:
+- "13BrightFutures5AsyncC"
+provides-member:
+- ["13BrightFutures5AsyncC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "+"
+- !private "=="
+- "AssignmentPrecedence"
+- "Async"
+- "AsyncType"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CustomDebugStringConvertible"
+- "CustomStringConvertible"
+- !private "DefaultThreadingModel"
+- "DispatchQueue"
+- "DispatchSemaphore"
+- !private "DispatchTime"
+- "DispatchTimeInterval"
+- "ExecutionContext"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "MutableAsyncType"
+- "Self"
+- "String"
+- "StringLiteralType"
+- !private "UnicodeScalarType"
+- "Void"
+- !private "assert"
+depends-member:
+- !private ["Sa", "append"]
+- ["Sa", "init"]
+- !private ["Sa", "removeAll"]
+- ["13BrightFutures5AsyncC", "AsyncType"]
+- ["13BrightFutures5AsyncC", "Bool"]
+- ["13BrightFutures5AsyncC", "CompletionCallback"]
+- !private ["13BrightFutures5AsyncC", "DefaultThreadingModel"]
+- ["13BrightFutures5AsyncC", "DispatchQueue"]
+- ["13BrightFutures5AsyncC", "DispatchSemaphore"]
+- !private ["13BrightFutures5AsyncC", "DispatchTime"]
+- ["13BrightFutures5AsyncC", "DispatchTimeInterval"]
+- ["13BrightFutures5AsyncC", "ExecutionContext"]
+- ["13BrightFutures5AsyncC", "Self"]
+- ["13BrightFutures5AsyncC", "String"]
+- ["13BrightFutures5AsyncC", "Value"]
+- ["13BrightFutures5AsyncC", "Void"]
+- ["13BrightFutures5AsyncC", "_Default_Value"]
+- !private ["13BrightFutures5AsyncC", "assert"]
+- !private ["13BrightFutures5AsyncC", "callbackExecutionSemaphore"]
+- !private ["13BrightFutures5AsyncC", "callbacks"]
+- !private ["13BrightFutures5AsyncC", "complete"]
+- !private ["13BrightFutures5AsyncC", "completeWith"]
+- ["13BrightFutures5AsyncC", "debugDescription"]
+- ["13BrightFutures5AsyncC", "deinit"]
+- ["13BrightFutures5AsyncC", "description"]
+- ["13BrightFutures5AsyncC", "init"]
+- ["13BrightFutures5AsyncC", "onComplete"]
+- !private ["13BrightFutures5AsyncC", "queue"]
+- ["13BrightFutures5AsyncC", "result"]
+- !private ["13BrightFutures5AsyncC", "runCallbacks"]
+- ["13BrightFutures5AsyncC", "tryComplete"]
+- ["13BrightFutures9AsyncTypeP", "CompletionCallback"]
+- !private ["13BrightFutures9AsyncTypeP", "DefaultThreadingModel"]
+- ["13BrightFutures9AsyncTypeP", "DispatchQueue"]
+- ["13BrightFutures9AsyncTypeP", "DispatchSemaphore"]
+- !private ["13BrightFutures9AsyncTypeP", "DispatchTime"]
+- ["13BrightFutures9AsyncTypeP", "Self"]
+- !private ["13BrightFutures9AsyncTypeP", "String"]
+- ["13BrightFutures9AsyncTypeP", "Value"]
+- ["13BrightFutures9AsyncTypeP", ""]
+- ["13BrightFutures9AsyncTypeP", "_Default_Value"]
+- !private ["13BrightFutures9AsyncTypeP", "assert"]
+- !private ["13BrightFutures9AsyncTypeP", "callbackExecutionSemaphore"]
+- !private ["13BrightFutures9AsyncTypeP", "callbacks"]
+- !private ["13BrightFutures9AsyncTypeP", "complete"]
+- !private ["13BrightFutures9AsyncTypeP", "completeWith"]
+- ["13BrightFutures9AsyncTypeP", "debugDescription"]
+- ["13BrightFutures9AsyncTypeP", "description"]
+- ["13BrightFutures9AsyncTypeP", "init"]
+- ["13BrightFutures9AsyncTypeP", "onComplete"]
+- !private ["13BrightFutures9AsyncTypeP", "queue"]
+- ["13BrightFutures9AsyncTypeP", "result"]
+- !private ["13BrightFutures9AsyncTypeP", "runCallbacks"]
+- ["13BrightFutures9AsyncTypeP", "tryComplete"]
+- !private ["SK", "append"]
+- ["SK", "init"]
+- !private ["SK", "removeAll"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "asyncAfter"]
+- !private ["s7CVarArgP", "context"]
+- !private ["s7CVarArgP", "global"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "removeAll"]
+- !private ["s7CVarArgP", "sync"]
+- !private ["Sl", "append"]
+- ["Sl", "init"]
+- !private ["Sl", "removeAll"]
+- !private ["SL", "init"]
+- !private ["SL", "now"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "removeAll"]
+- ["s28CustomDebugStringConvertibleP", "CompletionCallback"]
+- !private ["s28CustomDebugStringConvertibleP", "DefaultThreadingModel"]
+- ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- ["s28CustomDebugStringConvertibleP", "DispatchSemaphore"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchTime"]
+- ["s28CustomDebugStringConvertibleP", "Self"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- ["s28CustomDebugStringConvertibleP", "Value"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "_Default_Value"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "assert"]
+- !private ["s28CustomDebugStringConvertibleP", "asyncAfter"]
+- !private ["s28CustomDebugStringConvertibleP", "callbackExecutionSemaphore"]
+- !private ["s28CustomDebugStringConvertibleP", "callbacks"]
+- !private ["s28CustomDebugStringConvertibleP", "complete"]
+- !private ["s28CustomDebugStringConvertibleP", "completeWith"]
+- !private ["s28CustomDebugStringConvertibleP", "context"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "global"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "onComplete"]
+- !private ["s28CustomDebugStringConvertibleP", "queue"]
+- !private ["s28CustomDebugStringConvertibleP", "removeAll"]
+- ["s28CustomDebugStringConvertibleP", "result"]
+- !private ["s28CustomDebugStringConvertibleP", "runCallbacks"]
+- !private ["s28CustomDebugStringConvertibleP", "sync"]
+- ["s28CustomDebugStringConvertibleP", "tryComplete"]
+- !private ["s17CustomReflectableP", "append"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "removeAll"]
+- ["s23CustomStringConvertibleP", "CompletionCallback"]
+- !private ["s23CustomStringConvertibleP", "DefaultThreadingModel"]
+- ["s23CustomStringConvertibleP", "DispatchQueue"]
+- ["s23CustomStringConvertibleP", "DispatchSemaphore"]
+- !private ["s23CustomStringConvertibleP", "DispatchTime"]
+- ["s23CustomStringConvertibleP", "Self"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- ["s23CustomStringConvertibleP", "Value"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_Value"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "assert"]
+- !private ["s23CustomStringConvertibleP", "asyncAfter"]
+- !private ["s23CustomStringConvertibleP", "callbackExecutionSemaphore"]
+- !private ["s23CustomStringConvertibleP", "callbacks"]
+- !private ["s23CustomStringConvertibleP", "complete"]
+- !private ["s23CustomStringConvertibleP", "completeWith"]
+- !private ["s23CustomStringConvertibleP", "context"]
+- ["s23CustomStringConvertibleP", "debugDescription"]
+- ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "global"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "onComplete"]
+- !private ["s23CustomStringConvertibleP", "queue"]
+- !private ["s23CustomStringConvertibleP", "removeAll"]
+- ["s23CustomStringConvertibleP", "result"]
+- !private ["s23CustomStringConvertibleP", "runCallbacks"]
+- !private ["s23CustomStringConvertibleP", "sync"]
+- ["s23CustomStringConvertibleP", "tryComplete"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "removeAll"]
+- !private ["Se", "append"]
+- ["Se", "init"]
+- !private ["Se", "removeAll"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["So18OS_dispatch_objectC", "asyncAfter"]
+- !private ["So18OS_dispatch_objectC", "context"]
+- !private ["So18OS_dispatch_objectC", "global"]
+- ["So18OS_dispatch_objectC", "init"]
+- !private ["So18OS_dispatch_objectC", "sync"]
+- !private ["So17OS_dispatch_queueC", "asyncAfter"]
+- !private ["So17OS_dispatch_queueC", "global"]
+- ["So17OS_dispatch_queueC", "init"]
+- !private ["So17OS_dispatch_queueC", "sync"]
+- !private ["So21OS_dispatch_semaphoreC", "context"]
+- ["So21OS_dispatch_semaphoreC", "init"]
+- !private ["8Dispatch0A4TimeV", "now"]
+- !private ["SE", "append"]
+- ["SE", "init"]
+- !private ["SE", "removeAll"]
+- !private ["SQ", "append"]
+- !private ["SQ", "asyncAfter"]
+- !private ["SQ", "context"]
+- !private ["SQ", "global"]
+- ["SQ", "init"]
+- !private ["SQ", "now"]
+- !private ["SQ", "removeAll"]
+- !private ["SQ", "sync"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "removeAll"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "append"]
+- !private ["SH", "asyncAfter"]
+- !private ["SH", "context"]
+- !private ["SH", "global"]
+- ["SH", "init"]
+- !private ["SH", "removeAll"]
+- !private ["SH", "sync"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- ["13BrightFutures16MutableAsyncTypeP", "CompletionCallback"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "DefaultThreadingModel"]
+- ["13BrightFutures16MutableAsyncTypeP", "DispatchQueue"]
+- ["13BrightFutures16MutableAsyncTypeP", "DispatchSemaphore"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "DispatchTime"]
+- ["13BrightFutures16MutableAsyncTypeP", "Self"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "String"]
+- ["13BrightFutures16MutableAsyncTypeP", "Value"]
+- ["13BrightFutures16MutableAsyncTypeP", ""]
+- ["13BrightFutures16MutableAsyncTypeP", "_Default_Value"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "assert"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "callbackExecutionSemaphore"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "callbacks"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "complete"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "completeWith"]
+- ["13BrightFutures16MutableAsyncTypeP", "debugDescription"]
+- ["13BrightFutures16MutableAsyncTypeP", "description"]
+- ["13BrightFutures16MutableAsyncTypeP", "init"]
+- ["13BrightFutures16MutableAsyncTypeP", "onComplete"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "queue"]
+- ["13BrightFutures16MutableAsyncTypeP", "result"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "runCallbacks"]
+- ["13BrightFutures16MutableAsyncTypeP", "tryComplete"]
+- !private ["SM", "append"]
+- ["SM", "init"]
+- !private ["SM", "removeAll"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "removeAll"]
+- !private ["So8NSObjectC", "asyncAfter"]
+- !private ["So8NSObjectC", "context"]
+- !private ["So8NSObjectC", "global"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "sync"]
+- !private ["So8NSObjectP", "asyncAfter"]
+- !private ["So8NSObjectP", "context"]
+- !private ["So8NSObjectP", "global"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "sync"]
+- !private ["So9OS_objectC", "asyncAfter"]
+- !private ["So9OS_objectC", "context"]
+- !private ["So9OS_objectC", "global"]
+- ["So9OS_objectC", "init"]
+- !private ["So9OS_objectC", "sync"]
+- !private ["Sk", "append"]
+- ["Sk", "init"]
+- !private ["Sk", "removeAll"]
+- !private ["Sm", "append"]
+- ["Sm", "init"]
+- !private ["Sm", "removeAll"]
+- !private ["7Combine9SchedulerP", "asyncAfter"]
+- !private ["7Combine9SchedulerP", "global"]
+- ["7Combine9SchedulerP", "init"]
+- !private ["7Combine9SchedulerP", "sync"]
+- !private ["ST", "append"]
+- ["ST", "init"]
+- !private ["ST", "removeAll"]
+- !private ["SS", "init"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "removeAll"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "removeAll"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "removeAll"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "removeAll"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "asyncAfter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "context"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "global"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sync"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "asyncAfter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "context"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "global"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sync"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "removeAll"]
+depends-nominal:
+- "Sa"
+- "13BrightFutures5AsyncC"
+- "13BrightFutures9AsyncTypeP"
+- "SK"
+- "s7CVarArgP"
+- "Sl"
+- !private "SL"
+- "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation12DataProtocolP"
+- "Se"
+- !private "s26DefaultStringInterpolationV"
+- "So18OS_dispatch_objectC"
+- "So17OS_dispatch_queueC"
+- "So21OS_dispatch_semaphoreC"
+- !private "8Dispatch0A4TimeV"
+- "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "13BrightFutures16MutableAsyncTypeP"
+- "SM"
+- "10Foundation19MutableDataProtocolP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So9OS_objectC"
+- "Sk"
+- "Sm"
+- "7Combine9SchedulerP"
+- "ST"
+- !private "SS"
+- !private "s27StringInterpolationProtocolP"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s19_HasContiguousBytesP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/Target Support Files/BrightFutures/BrightFutures-umbrella.h"
+- "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Build/DerivedData/Intermediates/Pods.build/Debug-iphonesimulator/BrightFutures.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "ce237a72e6979abd973cc5629d6c830d"

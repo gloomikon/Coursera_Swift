@@ -1,0 +1,192 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ExecutionContext"
+- "ImmediateExecutionContext"
+- "ImmediateOnMainExecutionContext"
+- "MaxStackDepthExecutionContext"
+- "ThreadingModel"
+- "DefaultThreadingModel"
+- "defaultContext"
+provides-nominal:
+provides-member:
+provides-dynamic-lookup:
+depends-top-level:
+- "+"
+- ">"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "DefaultThreadingModel"
+- "DispatchQueue"
+- "ExecutionContext"
+- "FloatLiteralType"
+- "ImmediateExecutionContext"
+- "ImmediateOnMainExecutionContext"
+- "Int"
+- "IntegerLiteralType"
+- "MaxStackDepthExecutionContext"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- "Thread"
+- "ThreadingModel"
+- "Void"
+- "defaultContext"
+depends-member:
+- ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "context"]
+- ["s7CVarArgP", "current"]
+- ["s7CVarArgP", "global"]
+- ["s7CVarArgP", "isMainThread"]
+- ["s7CVarArgP", "main"]
+- ["s7CVarArgP", "subscript"]
+- ["s7CVarArgP", "threadDictionary"]
+- ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "context"]
+- ["s28CustomDebugStringConvertibleP", "current"]
+- ["s28CustomDebugStringConvertibleP", "global"]
+- ["s28CustomDebugStringConvertibleP", "isMainThread"]
+- ["s28CustomDebugStringConvertibleP", "main"]
+- ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "threadDictionary"]
+- ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "context"]
+- ["s23CustomStringConvertibleP", "current"]
+- ["s23CustomStringConvertibleP", "global"]
+- ["s23CustomStringConvertibleP", "isMainThread"]
+- ["s23CustomStringConvertibleP", "main"]
+- ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "threadDictionary"]
+- ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "context"]
+- ["So18OS_dispatch_objectC", "global"]
+- ["So18OS_dispatch_objectC", "main"]
+- ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "context"]
+- ["So17OS_dispatch_queueC", "global"]
+- ["So17OS_dispatch_queueC", "main"]
+- ["SQ", "async"]
+- !private ["SQ", "context"]
+- ["SQ", "current"]
+- ["SQ", "global"]
+- ["SQ", "isMainThread"]
+- ["SQ", "main"]
+- ["SQ", "subscript"]
+- ["SQ", "threadDictionary"]
+- ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["SH", "async"]
+- !private ["SH", "context"]
+- ["SH", "current"]
+- ["SH", "global"]
+- ["SH", "isMainThread"]
+- ["SH", "main"]
+- ["SH", "subscript"]
+- ["SH", "threadDictionary"]
+- ["So8NSCodingP", "subscript"]
+- ["So9NSCopyingP", "subscript"]
+- ["So12NSDictionaryC", "subscript"]
+- ["So17NSFastEnumerationP", "subscript"]
+- ["So16NSMutableCopyingP", "subscript"]
+- ["So19NSMutableDictionaryC", "subscript"]
+- ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "context"]
+- ["So8NSObjectC", "current"]
+- ["So8NSObjectC", "global"]
+- ["So8NSObjectC", "isMainThread"]
+- ["So8NSObjectC", "main"]
+- ["So8NSObjectC", "subscript"]
+- ["So8NSObjectC", "threadDictionary"]
+- ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "context"]
+- ["So8NSObjectP", "current"]
+- ["So8NSObjectP", "global"]
+- ["So8NSObjectP", "isMainThread"]
+- ["So8NSObjectP", "main"]
+- ["So8NSObjectP", "subscript"]
+- ["So8NSObjectP", "threadDictionary"]
+- ["So14NSSecureCodingP", "subscript"]
+- ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "context"]
+- ["So9OS_objectC", "global"]
+- ["So9OS_objectC", "main"]
+- ["7Combine9SchedulerP", "async"]
+- !private ["7Combine9SchedulerP", "context"]
+- ["7Combine9SchedulerP", "global"]
+- ["7Combine9SchedulerP", "main"]
+- ["ST", "subscript"]
+- ["So8NSThreadC", "current"]
+- ["So8NSThreadC", "isMainThread"]
+- ["So8NSThreadC", "threadDictionary"]
+- ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "context"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "current"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "global"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "isMainThread"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "threadDictionary"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "context"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "current"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "global"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isMainThread"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subscript"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "threadDictionary"]
+depends-nominal:
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "So18OS_dispatch_objectC"
+- "So17OS_dispatch_queueC"
+- "SQ"
+- "s30ExpressibleByDictionaryLiteralP"
+- "SH"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So12NSDictionaryC"
+- "So17NSFastEnumerationP"
+- "So16NSMutableCopyingP"
+- "So19NSMutableDictionaryC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- "So9OS_objectC"
+- "7Combine9SchedulerP"
+- "ST"
+- "So8NSThreadC"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/Target Support Files/BrightFutures/BrightFutures-umbrella.h"
+- "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Build/DerivedData/Intermediates/Pods.build/Debug-iphonesimulator/BrightFutures.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "ee3f3bbcfa2ed6b1a11b9759016f9ee9"

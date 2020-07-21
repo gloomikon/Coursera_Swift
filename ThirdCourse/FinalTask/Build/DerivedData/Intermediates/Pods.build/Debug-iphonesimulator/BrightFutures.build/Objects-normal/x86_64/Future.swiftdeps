@@ -1,0 +1,125 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Future"
+- "materialize"
+- "materialize"
+- "materialize"
+- "??"
+- "??"
+- "NoValue"
+provides-nominal:
+- "13BrightFutures6FutureC"
+- "13BrightFutures7NoValueO"
+provides-member:
+- ["13BrightFutures6FutureC", ""]
+- ["13BrightFutures7NoValueO", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "??"
+- "Async"
+- "AsyncType"
+- !private "DefaultThreadingModel"
+- "DispatchTimeInterval"
+- "Error"
+- "Future"
+- "Never"
+- "NoValue"
+- "Result"
+- "Void"
+- "materialize"
+depends-member:
+- ["13BrightFutures5AsyncC", "AsyncType"]
+- ["13BrightFutures5AsyncC", "DispatchTimeInterval"]
+- ["13BrightFutures5AsyncC", "Future"]
+- ["13BrightFutures5AsyncC", "Result"]
+- ["13BrightFutures5AsyncC", "Value"]
+- ["13BrightFutures5AsyncC", "Void"]
+- ["13BrightFutures5AsyncC", ""]
+- !private ["13BrightFutures5AsyncC", "deinit"]
+- ["13BrightFutures5AsyncC", "init"]
+- !private ["13BrightFutures5AsyncC", "recover"]
+- !private ["13BrightFutures5AsyncC", "recoverWith"]
+- ["13BrightFutures9AsyncTypeP", "Value"]
+- ["13BrightFutures9AsyncTypeP", ""]
+- !private ["13BrightFutures9AsyncTypeP", "init"]
+- !private ["13BrightFutures9AsyncTypeP", "recover"]
+- !private ["13BrightFutures9AsyncTypeP", "recoverWith"]
+- ["s28CustomDebugStringConvertibleP", "Value"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "recover"]
+- !private ["s28CustomDebugStringConvertibleP", "recoverWith"]
+- ["s23CustomStringConvertibleP", "Value"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "recover"]
+- !private ["s23CustomStringConvertibleP", "recoverWith"]
+- !private ["SQ", "failure"]
+- !private ["SQ", "success"]
+- ["13BrightFutures6FutureC", "AsyncType"]
+- ["13BrightFutures6FutureC", "CompletionCallback"]
+- ["13BrightFutures6FutureC", "DispatchTimeInterval"]
+- ["13BrightFutures6FutureC", "FailureCallback"]
+- ["13BrightFutures6FutureC", "Future"]
+- ["13BrightFutures6FutureC", "Result"]
+- ["13BrightFutures6FutureC", "SuccessCallback"]
+- ["13BrightFutures6FutureC", "Value"]
+- ["13BrightFutures6FutureC", "Void"]
+- ["13BrightFutures6FutureC", "deinit"]
+- ["13BrightFutures6FutureC", "init"]
+- !private ["13BrightFutures6FutureC", "recover"]
+- !private ["13BrightFutures6FutureC", "recoverWith"]
+- !private ["SH", "failure"]
+- !private ["SH", "success"]
+- ["13BrightFutures16MutableAsyncTypeP", "Value"]
+- ["13BrightFutures16MutableAsyncTypeP", ""]
+- !private ["13BrightFutures16MutableAsyncTypeP", "init"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "recover"]
+- !private ["13BrightFutures16MutableAsyncTypeP", "recoverWith"]
+- !private ["s6ResultO", "deinit"]
+- !private ["s6ResultO", "failure"]
+- !private ["s6ResultO", "success"]
+- !private ["13BrightFutures14ResultProtocolP", "failure"]
+- !private ["13BrightFutures14ResultProtocolP", "success"]
+depends-nominal:
+- "13BrightFutures5AsyncC"
+- "13BrightFutures9AsyncTypeP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- !private "SQ"
+- "13BrightFutures6FutureC"
+- !private "SH"
+- "13BrightFutures16MutableAsyncTypeP"
+- !private "s6ResultO"
+- !private "13BrightFutures14ResultProtocolP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/Target Support Files/BrightFutures/BrightFutures-umbrella.h"
+- "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Build/DerivedData/Intermediates/Pods.build/Debug-iphonesimulator/BrightFutures.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "1feaf7e597e98d6a77adc952ad8acdd0"

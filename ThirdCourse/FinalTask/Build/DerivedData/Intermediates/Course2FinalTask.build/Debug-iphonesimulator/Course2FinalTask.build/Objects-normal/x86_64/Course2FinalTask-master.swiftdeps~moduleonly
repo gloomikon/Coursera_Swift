@@ -1,0 +1,16 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "bf22f469089379477f249d5dad7a21db"
+build_time: [1595361063, 683250000]
+inputs:
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/Profile/TopView/ProfileTopView.swift": [1587834918, 896989942]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/List/Cell/ListTableViewCell.swift": [1587811430, 374294162]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/KFoundation/KDataProvider.swift": [1595237025, 376454447]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/Profile/ProfileViewController.swift": !dirty [1595155487, 905808902]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/KUIKit/SegueHandler.swift": [1595155498, 348210994]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/Extensions/UIViewController+Alert.swift": [1595156229, 315732561]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/List/ListViewController.swift": !dirty [1587831569, 823869944]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/KUIKit/BaseViewController.swift": [1595155545, 545745372]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/Feed/Cell/FeedCell.swift": [1587810111, 440921307]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/Feed/FeedViewController.swift": !dirty [1595230592, 539764755]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/AppDelegate.swift": [1587381540, 212659121]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Course2FinalTask/Code/Profile/PostCell/PostCell.swift": [1587832499, 287215471]

@@ -1,0 +1,20 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "27f16904079d2a8672d197c3ceda8961"
+build_time: [1595168111, 945675000]
+inputs:
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/Async.swift": [1595167786, 12884620]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/AsyncType+Debug.swift": [1595167786, 14937805]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/AsyncType+ResultType.swift": [1595167786, 10726816]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/AsyncType.swift": [1595167786, 10300124]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/Dispatch+BrightFutures.swift": [1595167786, 13283911]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/Errors.swift": [1595167786, 14505949]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/ExecutionContext.swift": [1595167786, 11150159]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/Future.swift": [1595167786, 9883517]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/InvalidationToken.swift": [1595167786, 15336336]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/MutableAsyncType+ResultType.swift": [1595167786, 15711180]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/MutableAsyncType.swift": [1595167786, 12058287]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/NSOperationQueue+BrightFutures.swift": [1595167786, 12472345]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/Promise.swift": [1595167786, 13690836]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/Result+BrightFutures.swift": [1595167786, 11612717]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/ResultProtocol.swift": [1595167786, 9468514]
+  "/Users/gloomikon/Desktop/Coursera_Swift/ThirdCourse/FinalTask/Pods/BrightFutures/Sources/BrightFutures/SequenceType+BrightFutures.swift": [1595167786, 14107418]

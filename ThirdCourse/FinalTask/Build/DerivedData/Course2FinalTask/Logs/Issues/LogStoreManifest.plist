@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>16B56CA2-5DCA-49D6-A922-A0365F72C721</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>16B56CA2-5DCA-49D6-A922-A0365F72C721.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>BrightFutures-eqigkmsanprufvgiyznavcheskbg</string>
+			<key>timeStartedRecording</key>
+			<real>616860911.93050897</real>
+			<key>timeStoppedRecording</key>
+			<real>616860919.26992798</real>
+			<key>title</key>
+			<string>Build target BrightFutures</string>
+			<key>uniqueIdentifier</key>
+			<string>16B56CA2-5DCA-49D6-A922-A0365F72C721</string>
+		</dict>
+		<key>375020F6-470F-42D1-890C-A41033F508DB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>375020F6-470F-42D1-890C-A41033F508DB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>Course2FinalTask-elwqiboezqzhgdguvaeonboktojf</string>
+			<key>timeStartedRecording</key>
+			<real>616860920.14488494</real>
+			<key>timeStoppedRecording</key>
+			<real>616860924.472013</real>
+			<key>title</key>
+			<string>Build target Course2FinalTask</string>
+			<key>uniqueIdentifier</key>
+			<string>375020F6-470F-42D1-890C-A41033F508DB</string>
+		</dict>
+		<key>8E2FCCF2-CA82-4F22-A50F-AC417E3532A3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>8E2FCCF2-CA82-4F22-A50F-AC417E3532A3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>Pods-Course2FinalTask-eqigkmsanprufvgiyznavcheskbg</string>
+			<key>timeStartedRecording</key>
+			<real>616860911.92954898</real>
+			<key>timeStoppedRecording</key>
+			<real>616860920.17083299</real>
+			<key>title</key>
+			<string>Build target Pods-Course2FinalTask</string>
+			<key>uniqueIdentifier</key>
+			<string>8E2FCCF2-CA82-4F22-A50F-AC417E3532A3</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>
