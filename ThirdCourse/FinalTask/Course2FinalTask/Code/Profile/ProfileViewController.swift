@@ -9,7 +9,7 @@
 import UIKit
 import DataProvider
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: BaseViewController {
     private struct Constant {
         static let showFollowersSequeID = "showFollowers"
         static let showFollowingSequeID = "showFollowing"
@@ -35,10 +35,9 @@ class ProfileViewController: UIViewController {
     // MARK: = Properties
 
     var userId: User.Identifier?
-
-    var userId = DataProviders.shared.usersDataProvider.currentUser().id
-
     var posts: [Post]?
+
+    private let segueHandler = SegueHandler()
     private let cellId = String(describing: PostCell.self)
 
     // MARK: - Life cycle
@@ -46,42 +45,53 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DataProviders.shared.usersDataProvider.currentUser(queue: DispatchQueue.global(qos: .userInitiated)) { [weak self] user in
-            if let user = user {
-                self?.userId = user.id
+        if let userId = userId {
+            setAppearance(with: userId)
+            getPosts(with: userId)
+        }
+        else {
+            KDataProvider.currentUser()
+                .onSuccess { [weak self] user in
+                    self?.userId = user.id
+                    self?.setAppearance(with: user.id)
+                    self?.getPosts(with: user.id)
+            }
+            .onFailure { [weak self] error in
+                self?.showAlert()
             }
         }
 
-        guard let user = DataProviders.shared.usersDataProvider.user(with: userId) else {
-            return
-        }
-
-        navigationItem.title = user.username
-
-        flowLayout.minimumLineSpacing = .zero
-        flowLayout.minimumInteritemSpacing = .zero
-        flowLayout.itemSize = CGSize(width: view.bounds.size.width / 3, height: view.bounds.size.width / 3)
-
-        posts = DataProviders.shared.postsDataProvider.findPosts(by: userId)
-        topView.configure(with: user)
         collectionView.register(UINib(nibName: "PostCell", bundle: nil), forCellWithReuseIdentifier: cellId)
     }
 
     // MARK: - Functions
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? ListViewController else {
-            return
-        }
-        vc.userId = userId
+    private func setAppearance(with userId: User.Identifier) {
+        KDataProvider.user(with: userId)
+            .onSuccess { [weak self] user in
+                guard let self = self else {
+                    return
+                }
 
-        switch segue.identifier {
-        case Constant.showFollowersSequeID:
-            vc.destiny = .followers
-        case Constant.showFollowingSequeID:
-            vc.destiny = .following
-        default:
-            break
+                self.navigationItem.title = user.username
+                self.flowLayout.minimumLineSpacing = .zero
+                self.flowLayout.minimumInteritemSpacing = .zero
+                self.flowLayout.itemSize = CGSize(width: self.view.bounds.size.width / 3, height: self.view.bounds.size.width / 3)
+                self.topView.configure(with: user)
+        }
+        .onFailure { [weak self] error in
+            self?.showAlert()
+        }
+    }
+
+    private func getPosts(with userId: User.Identifier) {
+        KDataProvider.findPosts(by: userId)
+            .onSuccess { [weak self] posts in
+                self?.posts = posts
+                self?.collectionView.reloadData()
+        }
+        .onFailure { [weak self] error in
+            self?.showAlert()
         }
     }
 }
@@ -90,11 +100,29 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: ProfileTopViewDelegate {
     func openFollowers() {
-        performSegue(withIdentifier: Constant.showFollowersSequeID, sender: self)
+        guard let userId = userId else {
+            return
+        }
+
+        segueHandler.perform(from: self, identifier: Constant.showFollowersSequeID) { viewController in
+            if let viewController = viewController as? ListViewController {
+                viewController.userId = userId
+                viewController.destiny = .followers
+            }
+        }
     }
 
     func openFollowings() {
-        performSegue(withIdentifier: Constant.showFollowingSequeID, sender: self)
+        guard let userId = userId else {
+            return
+        }
+
+        segueHandler.perform(from: self, identifier: Constant.showFollowingSequeID) { viewController in
+            if let viewController = viewController as? ListViewController {
+                viewController.userId = userId
+                viewController.destiny = .following
+            }
+        }
     }
 }
 

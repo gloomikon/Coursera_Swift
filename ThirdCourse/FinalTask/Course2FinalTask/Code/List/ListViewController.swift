@@ -15,7 +15,7 @@ enum ListViewControllerDestiny {
     case followers
 }
 
-class ListViewController: UIViewController {
+class ListViewController: BaseViewController {
     private struct Constant {
         static let gotoProfileSegueId = "gotoProfile"
         static let likesTitle = "Likes"
@@ -38,40 +38,57 @@ class ListViewController: UIViewController {
     var userId: User.Identifier!
     var destiny: ListViewControllerDestiny!
 
-    private var userToDisplayId: User.Identifier!
     private var usersToDisplay: [User]?
     private let cellIdentifier = String(describing: ListTableViewCell.self)
+    private let segueHandler = SegueHandler()
 
     // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        getList()
+    }
+
+    // MARK: - Functions
+
+    private func getList() {
         switch destiny {
         case .likes:
             title = Constant.likesTitle
-            usersToDisplay = DataProviders.shared.postsDataProvider.usersLikedPost(with: postId)?
-                .compactMap { id in
-                    return DataProviders.shared.usersDataProvider.user(with: id)
+            KDataProvider.usersLikedPost(with: postId)
+                .onSuccess { [weak self] users in
+                    self?.usersToDisplay = users
+                    print(users)
+                    self?.tableView.reloadData()
+            }
+            .onFailure { [weak self] error in
+                self?.showAlert()
             }
         case .following:
             title = Constant.followingTitle
-            usersToDisplay = DataProviders.shared.usersDataProvider.usersFollowedByUser(with: userId)
+            KDataProvider.usersFollowedByUser(with: userId)
+                .onSuccess { [weak self] users in
+                    self?.usersToDisplay = users
+                    self?.tableView.reloadData()
+            }
+            .onFailure { [weak self] error in
+                self?.showAlert()
+            }
         case .followers:
             title = Constant.followersTitle
-            usersToDisplay = DataProviders.shared.usersDataProvider.usersFollowingUser(with: userId)
+            KDataProvider.usersFollowingUser(with: userId)
+                .onSuccess { [weak self] users in
+                    self?.usersToDisplay = users
+                    self?.tableView.reloadData()
+            }
+            .onFailure { [weak self] error in
+                self?.showAlert()
+            }
         case .none:
             break
         }
-
-        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? ProfileViewController else {
-            return
-        }
-
-        vc.userId = userToDisplayId
     }
 }
 
@@ -86,8 +103,12 @@ extension ListViewController: UITableViewDelegate {
         guard let usersLikedPost = usersToDisplay else {
             return
         }
-        userToDisplayId = usersLikedPost[indexPath.row].id
-        performSegue(withIdentifier: Constant.gotoProfileSegueId, sender: self)
+
+        segueHandler.perform(from: self, identifier: Constant.gotoProfileSegueId) { viewController in
+            if let viewController = viewController as? ProfileViewController {
+                viewController.userId = usersLikedPost[indexPath.row].id
+            }
+        }
     }
 }
 
@@ -99,10 +120,12 @@ extension ListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let usersToDisplay = usersToDisplay,
+        guard
+            let usersToDisplay = usersToDisplay,
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ListTableViewCell else {
                 return UITableViewCell()
         }
+
         cell.configure(with: usersToDisplay[indexPath.row])
         return cell
     }

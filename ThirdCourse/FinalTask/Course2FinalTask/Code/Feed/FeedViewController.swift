@@ -1,4 +1,5 @@
 import UIKit
+import BrightFutures
 import DataProvider
 
 class FeedViewController: BaseViewController {
@@ -29,18 +30,22 @@ class FeedViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DataProviders.shared.postsDataProvider.feed(queue: DispatchQueue.global(qos: .userInitiated)) { [weak self] posts in
-            guard let posts = posts else {
-                DispatchQueue.main.async {
-                    self?.showAlert()
-                }
-                return
-            }
-
-            self?.posts = posts
-        }
-
         tableView.register(UINib(nibName: "FeedCell", bundle: nil), forCellReuseIdentifier: cellId)
+
+        getPosts()
+    }
+
+    // MARK: - Functions
+
+    private func getPosts() {
+        KDataProvider.feed()
+            .onSuccess { [weak self] posts in
+                self?.posts = posts
+                self?.tableView.reloadData()
+        }
+        .onFailure { [weak self] error in
+            self?.showAlert()
+        }
     }
 }
 
@@ -83,9 +88,19 @@ extension FeedViewController: FeedCellDelagate {
     }
 
     func handleLikeButtonTap(id: Post.Identifier) {
-        let _ = DataProviders.shared.postsDataProvider.post(with: id)!.currentUserLikesThisPost ? DataProviders.shared.postsDataProvider.unlikePost(with: id) : DataProviders.shared.postsDataProvider.likePost(with: id)
-        posts = DataProviders.shared.postsDataProvider.feed()
-        tableView.reloadData()
+        KDataProvider.post(with: id).flatMap { post in
+            post.currentUserLikesThisPost ? KDataProvider.unlikePost(with: id) : KDataProvider.likePost(with: id)
+        }
+        .flatMap{ post in
+            KDataProvider.feed()
+        }
+        .onSuccess { [weak self] posts in
+            self?.posts = posts
+            self?.tableView.reloadData()
+        }
+        .onFailure { [weak self] error in
+            self?.showAlert()
+        }
     }
 
     func handleLikesCountLabelTap(id: Post.Identifier) {
@@ -98,8 +113,18 @@ extension FeedViewController: FeedCellDelagate {
     }
 
     func handlePostDoubleTap(id: Post.Identifier) {
-        let _ = DataProviders.shared.postsDataProvider.likePost(with: id)
-        posts = DataProviders.shared.postsDataProvider.feed()
-        tableView.reloadData()
+        KDataProvider.likePost(with: id).flatMap { _ in
+            KDataProvider.feed()
+        }
+        .onSuccess { [weak self] posts in
+            self?.posts = posts
+            self?.tableView.reloadData()
+        }
+        .onFailure { [weak self] error in
+            self?.showAlert()
+        }
+//        let _ = DataProviders.shared.postsDataProvider.likePost(with: id)
+//        posts = DataProviders.shared.postsDataProvider.feed()
+//        tableView.reloadData()
     }
 }

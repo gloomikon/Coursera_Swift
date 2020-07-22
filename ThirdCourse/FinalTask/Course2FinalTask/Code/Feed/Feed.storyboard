@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tFr-Rv-wV1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tFr-Rv-wV1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,10 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="JbE-Kn-4SS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jzn-d9-tlh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="D1u-VV-jPr" firstAttribute="trailing" secondItem="jzn-d9-tlh" secondAttribute="trailing" id="LmG-ho-Qq5"/>
+                            <constraint firstItem="D1u-VV-jPr" firstAttribute="bottom" secondItem="jzn-d9-tlh" secondAttribute="bottom" id="M6g-rW-pwG"/>
+                            <constraint firstItem="jzn-d9-tlh" firstAttribute="top" secondItem="D1u-VV-jPr" secondAttribute="top" id="oo7-dZ-hOU"/>
+                            <constraint firstItem="jzn-d9-tlh" firstAttribute="leading" secondItem="D1u-VV-jPr" secondAttribute="leading" id="wLK-jN-yMw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="D1u-VV-jPr"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="jzn-d9-tlh" id="8OD-7X-wHi"/>
                         <segue destination="HZu-sn-KKa" kind="show" identifier="showAuthorProfile" id="uYt-PX-ZsP"/>
                         <segue destination="9tK-Ty-i3a" kind="show" identifier="showLikesList" id="QhI-AH-T1w"/>
                     </connections>
