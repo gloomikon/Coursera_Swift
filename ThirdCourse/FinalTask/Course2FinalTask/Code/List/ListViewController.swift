@@ -24,6 +24,12 @@ class ListViewController: BaseViewController {
         }
     }
 
+    @IBOutlet var loaderView: LoaderView! {
+        didSet {
+            loaderView.isHidden = true
+        }
+    }
+
     // MARK: - Properties
 
     var postId: Post.Identifier!
@@ -46,13 +52,15 @@ class ListViewController: BaseViewController {
     // MARK: - Functions
 
     private func getList() {
+        loaderView.isHidden = false
+        
         switch destiny {
         case .likes:
             title = Constant.likesTitle
             KDataProvider.usersLikedPost(with: postId)
                 .onSuccess { [weak self] users in
+                    self?.loaderView.isHidden = true
                     self?.usersToDisplay = users
-                    print(users)
                     self?.tableView.reloadData()
             }
             .onFailure { [weak self] error in
@@ -62,6 +70,7 @@ class ListViewController: BaseViewController {
             title = Constant.followingTitle
             KDataProvider.usersFollowedByUser(with: userId)
                 .onSuccess { [weak self] users in
+                    self?.loaderView.isHidden = true
                     self?.usersToDisplay = users
                     self?.tableView.reloadData()
             }
@@ -72,6 +81,7 @@ class ListViewController: BaseViewController {
             title = Constant.followersTitle
             KDataProvider.usersFollowingUser(with: userId)
                 .onSuccess { [weak self] users in
+                    self?.loaderView.isHidden = true
                     self?.usersToDisplay = users
                     self?.tableView.reloadData()
             }
