@@ -1,11 +1,3 @@
-//
-//  ProfileViewController.swift
-//  Course2FinalTask
-//
-//  Created by Nikolay Zhurba on 20.04.2020.
-//  Copyright © 2020 e-Legion. All rights reserved.
-//
-
 import UIKit
 import DataProvider
 

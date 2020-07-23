@@ -88,19 +88,18 @@ extension FeedViewController: FeedCellDelagate {
     }
 
     func handleLikeButtonTap(id: Post.Identifier) {
-        KDataProvider.post(with: id).flatMap { post in
-            post.currentUserLikesThisPost ? KDataProvider.unlikePost(with: id) : KDataProvider.likePost(with: id)
+        guard let postIndex = posts.firstIndex(where: { $0.id == id}) else {
+            return
         }
-        .flatMap{ post in
-            KDataProvider.feed()
+
+        (posts[postIndex].currentUserLikesThisPost ? KDataProvider.unlikePost(with: id) : KDataProvider.likePost(with: id))
+            .onSuccess { _ in }
+            .onFailure { [weak self] error in
+                self?.showAlert()
         }
-        .onSuccess { [weak self] posts in
-            self?.posts = posts
-            self?.tableView.reloadData()
-        }
-        .onFailure { [weak self] error in
-            self?.showAlert()
-        }
+
+        posts[postIndex].like(shouldKeepLiked: false)
+        tableView.reloadData()
     }
 
     func handleLikesCountLabelTap(id: Post.Identifier) {
@@ -113,18 +112,17 @@ extension FeedViewController: FeedCellDelagate {
     }
 
     func handlePostDoubleTap(id: Post.Identifier) {
-        KDataProvider.likePost(with: id).flatMap { _ in
-            KDataProvider.feed()
+        guard let postIndex = posts.firstIndex(where: { $0.id == id}) else {
+            return
         }
-        .onSuccess { [weak self] posts in
-            self?.posts = posts
-            self?.tableView.reloadData()
-        }
+
+        posts[postIndex].like(shouldKeepLiked: true)
+        tableView.reloadData()
+
+        KDataProvider.likePost(with: id)
+        .onSuccess { _ in }
         .onFailure { [weak self] error in
             self?.showAlert()
         }
-//        let _ = DataProviders.shared.postsDataProvider.likePost(with: id)
-//        posts = DataProviders.shared.postsDataProvider.feed()
-//        tableView.reloadData()
     }
 }
