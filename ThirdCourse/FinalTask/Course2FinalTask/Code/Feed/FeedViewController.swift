@@ -17,6 +17,12 @@ class FeedViewController: BaseViewController {
         }
     }
 
+    @IBOutlet var loaderView: LoaderView! {
+        didSet {
+            loaderView.isHidden = true
+        }
+    }
+
     // MARK: - Private properties
 
     private var posts: [Post] = []
@@ -38,12 +44,15 @@ class FeedViewController: BaseViewController {
     // MARK: - Functions
 
     private func getPosts() {
+        loaderView.isHidden = false
         KDataProvider.feed()
             .onSuccess { [weak self] posts in
+                self?.loaderView.isHidden = true
                 self?.posts = posts
                 self?.tableView.reloadData()
         }
         .onFailure { [weak self] error in
+            self?.loaderView.isHidden = true
             self?.showAlert()
         }
     }

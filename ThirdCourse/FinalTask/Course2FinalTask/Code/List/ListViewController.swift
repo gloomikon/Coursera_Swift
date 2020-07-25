@@ -64,6 +64,7 @@ class ListViewController: BaseViewController {
                     self?.tableView.reloadData()
             }
             .onFailure { [weak self] error in
+                self?.loaderView.isHidden = true
                 self?.showAlert()
             }
         case .following:
@@ -75,6 +76,7 @@ class ListViewController: BaseViewController {
                     self?.tableView.reloadData()
             }
             .onFailure { [weak self] error in
+                self?.loaderView.isHidden = true
                 self?.showAlert()
             }
         case .followers:
@@ -86,6 +88,7 @@ class ListViewController: BaseViewController {
                     self?.tableView.reloadData()
             }
             .onFailure { [weak self] error in
+                self?.loaderView.isHidden = true
                 self?.showAlert()
             }
         case .none:

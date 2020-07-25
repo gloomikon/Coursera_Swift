@@ -21,6 +21,11 @@ class ProfileViewController: BaseViewController {
             collectionView.delegate = self
         }
     }
+    @IBOutlet var loaderView: LoaderView! {
+        didSet {
+            loaderView.isHidden = true
+        }
+    }
 
     @IBOutlet var flowLayout: UICollectionViewFlowLayout!
 
@@ -37,6 +42,7 @@ class ProfileViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loaderView.isHidden = false
         if let userId = userId {
             setAppearance(with: userId)
         }
@@ -47,6 +53,7 @@ class ProfileViewController: BaseViewController {
                     self?.setAppearance(with: user.id)
             }
             .onFailure { [weak self] error in
+                self?.loaderView.isHidden = true
                 self?.showAlert()
             }
         }
@@ -64,6 +71,7 @@ class ProfileViewController: BaseViewController {
                     return
                 }
 
+                self.loaderView.isHidden = true
                 self.navigationItem.title = user.username
                 self.flowLayout.minimumLineSpacing = .zero
                 self.flowLayout.minimumInteritemSpacing = .zero
@@ -74,6 +82,7 @@ class ProfileViewController: BaseViewController {
                 self.collectionView.reloadData()
         }
         .onFailure { [weak self] error in
+            self?.loaderView.isHidden = true
             self?.showAlert()
         }
     }
@@ -125,6 +134,7 @@ extension ProfileViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? PostCell else {
             return UICollectionViewCell()
         }
+
         cell.configure(with: posts[indexPath.row])
         return cell
     }

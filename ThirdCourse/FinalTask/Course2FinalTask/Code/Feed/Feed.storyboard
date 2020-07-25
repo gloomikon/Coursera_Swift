@@ -20,17 +20,26 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fv2-O2-xmp" customClass="LoaderView" customModule="Course2FinalTask" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="D1u-VV-jPr" firstAttribute="trailing" secondItem="fv2-O2-xmp" secondAttribute="trailing" id="1Gl-2I-U5H"/>
                             <constraint firstItem="D1u-VV-jPr" firstAttribute="trailing" secondItem="jzn-d9-tlh" secondAttribute="trailing" id="LmG-ho-Qq5"/>
                             <constraint firstItem="D1u-VV-jPr" firstAttribute="bottom" secondItem="jzn-d9-tlh" secondAttribute="bottom" id="M6g-rW-pwG"/>
+                            <constraint firstItem="fv2-O2-xmp" firstAttribute="top" secondItem="D1u-VV-jPr" secondAttribute="top" id="MRU-Sr-xvh"/>
+                            <constraint firstItem="fv2-O2-xmp" firstAttribute="leading" secondItem="D1u-VV-jPr" secondAttribute="leading" id="O0o-Dj-ggc"/>
                             <constraint firstItem="jzn-d9-tlh" firstAttribute="top" secondItem="D1u-VV-jPr" secondAttribute="top" id="oo7-dZ-hOU"/>
                             <constraint firstItem="jzn-d9-tlh" firstAttribute="leading" secondItem="D1u-VV-jPr" secondAttribute="leading" id="wLK-jN-yMw"/>
+                            <constraint firstItem="D1u-VV-jPr" firstAttribute="bottom" secondItem="fv2-O2-xmp" secondAttribute="bottom" id="xiT-Yq-mN4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D1u-VV-jPr"/>
                     </view>
                     <connections>
+                        <outlet property="loaderView" destination="fv2-O2-xmp" id="Udc-HD-5zU"/>
                         <outlet property="tableView" destination="jzn-d9-tlh" id="8OD-7X-wHi"/>
                         <segue destination="HZu-sn-KKa" kind="show" identifier="showAuthorProfile" id="uYt-PX-ZsP"/>
                         <segue destination="9tK-Ty-i3a" kind="show" identifier="showLikesList" id="QhI-AH-T1w"/>
