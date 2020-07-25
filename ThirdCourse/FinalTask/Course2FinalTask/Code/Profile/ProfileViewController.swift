@@ -39,14 +39,12 @@ class ProfileViewController: BaseViewController {
 
         if let userId = userId {
             setAppearance(with: userId)
-            getPosts(with: userId)
         }
         else {
             KDataProvider.currentUser()
                 .onSuccess { [weak self] user in
                     self?.userId = user.id
                     self?.setAppearance(with: user.id)
-                    self?.getPosts(with: user.id)
             }
             .onFailure { [weak self] error in
                 self?.showAlert()
@@ -60,7 +58,8 @@ class ProfileViewController: BaseViewController {
 
     private func setAppearance(with userId: User.Identifier) {
         KDataProvider.user(with: userId)
-            .onSuccess { [weak self] user in
+            .zip(KDataProvider.findPosts(by: userId))
+            .onSuccess { [weak self] user, posts in
                 guard let self = self else {
                     return
                 }
@@ -70,17 +69,9 @@ class ProfileViewController: BaseViewController {
                 self.flowLayout.minimumInteritemSpacing = .zero
                 self.flowLayout.itemSize = CGSize(width: self.view.bounds.size.width / 3, height: self.view.bounds.size.width / 3)
                 self.topView.configure(with: user)
-        }
-        .onFailure { [weak self] error in
-            self?.showAlert()
-        }
-    }
 
-    private func getPosts(with userId: User.Identifier) {
-        KDataProvider.findPosts(by: userId)
-            .onSuccess { [weak self] posts in
-                self?.posts = posts
-                self?.collectionView.reloadData()
+                self.posts = posts
+                self.collectionView.reloadData()
         }
         .onFailure { [weak self] error in
             self?.showAlert()

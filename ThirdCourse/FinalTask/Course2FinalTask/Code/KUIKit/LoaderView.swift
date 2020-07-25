@@ -1,6 +1,5 @@
 import UIKit
 
-@IBDesignable
 class LoaderView: UIView {
 
     // MARK: - IBOutlets
