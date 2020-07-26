@@ -17,12 +17,6 @@ class FeedViewController: BaseViewController {
         }
     }
 
-    @IBOutlet var loaderView: LoaderView! {
-        didSet {
-            loaderView.isHidden = true
-        }
-    }
-
     // MARK: - Private properties
 
     private var posts: [Post] = []
@@ -38,23 +32,30 @@ class FeedViewController: BaseViewController {
 
         tableView.register(UINib(nibName: "FeedCell", bundle: nil), forCellReuseIdentifier: cellId)
 
-        getPosts()
+        getPosts(scrollToTop: false)
     }
 
     // MARK: - Functions
 
-    private func getPosts() {
-        loaderView.isHidden = false
+    private func getPosts(scrollToTop: Bool) {
+        KDataProvider.showLoaderView()
         KDataProvider.feed()
             .onSuccess { [weak self] posts in
-                self?.loaderView.isHidden = true
+                KDataProvider.hideLoaderView()
                 self?.posts = posts
                 self?.tableView.reloadData()
+                if scrollToTop {
+                    self?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+                }
         }
         .onFailure { [weak self] error in
-            self?.loaderView.isHidden = true
+            KDataProvider.hideLoaderView()
             self?.showAlert()
         }
+    }
+
+    func updatePosts() {
+        getPosts(scrollToTop: true)
     }
 }
 

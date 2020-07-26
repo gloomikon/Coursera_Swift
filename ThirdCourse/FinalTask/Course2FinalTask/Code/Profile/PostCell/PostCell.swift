@@ -7,4 +7,8 @@ class PostCell: UICollectionViewCell {
     func configure(with post: Post) {
         postImage.image = post.image
     }
+
+    func configure(with image: UIImage) {
+        postImage.image = image
+    }
 }

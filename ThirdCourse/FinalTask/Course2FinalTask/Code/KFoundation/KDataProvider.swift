@@ -1,11 +1,32 @@
 import BrightFutures
 import DataProvider
+import UIKit
 
 enum AnyError: Error {
     case unknown
 }
 
 class KDataProvider {
+    static private var loaderView: LoaderView = {
+        guard let window = UIApplication.shared.keyWindow else { fatalError() }
+        let view = LoaderView(frame: window.bounds)
+        return view
+    }()
+
+    static func showLoaderView() {
+        guard let window = UIApplication.shared.keyWindow else {
+            return
+        }
+        DispatchQueue.main.async {
+            window.addSubview(loaderView)
+        }
+    }
+
+    static func hideLoaderView() {
+        DispatchQueue.main.async {
+            loaderView.removeFromSuperview()
+        }
+    }
 
     // MARK: - Users Data Provider
 

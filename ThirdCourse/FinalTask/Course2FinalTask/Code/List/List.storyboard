@@ -20,25 +20,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2u-Bc-YJV" customClass="LoaderView" customModule="Course2FinalTask" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="a2u-Bc-YJV" firstAttribute="top" secondItem="0a3-DT-8ra" secondAttribute="top" id="1kI-uc-y10"/>
-                            <constraint firstItem="0a3-DT-8ra" firstAttribute="bottom" secondItem="a2u-Bc-YJV" secondAttribute="bottom" id="3OZ-uI-yNu"/>
                             <constraint firstItem="h5o-vZ-rfX" firstAttribute="leading" secondItem="0a3-DT-8ra" secondAttribute="leading" id="8DG-FT-ZH6"/>
                             <constraint firstAttribute="bottom" secondItem="h5o-vZ-rfX" secondAttribute="bottom" id="9oF-2N-fj2"/>
                             <constraint firstItem="h5o-vZ-rfX" firstAttribute="top" secondItem="x9o-O7-aCG" secondAttribute="top" id="DQk-tI-1x4"/>
-                            <constraint firstItem="a2u-Bc-YJV" firstAttribute="leading" secondItem="0a3-DT-8ra" secondAttribute="leading" id="HDw-Fe-PkG"/>
                             <constraint firstItem="0a3-DT-8ra" firstAttribute="trailing" secondItem="h5o-vZ-rfX" secondAttribute="trailing" id="Hmu-vL-a3Y"/>
-                            <constraint firstItem="0a3-DT-8ra" firstAttribute="trailing" secondItem="a2u-Bc-YJV" secondAttribute="trailing" id="hRE-8c-ooV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0a3-DT-8ra"/>
                     </view>
                     <connections>
-                        <outlet property="loaderView" destination="a2u-Bc-YJV" id="keY-bv-zW8"/>
                         <outlet property="tableView" destination="h5o-vZ-rfX" id="Q19-lA-VyJ"/>
                         <segue destination="sg4-at-tn6" kind="show" identifier="gotoProfile" id="rj8-qd-luw"/>
                     </connections>

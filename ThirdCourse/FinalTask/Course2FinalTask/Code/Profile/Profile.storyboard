@@ -44,10 +44,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Kb-QS-wgV" customClass="LoaderView" customModule="Course2FinalTask" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -57,18 +53,13 @@
                             <constraint firstItem="FLJ-uq-OLS" firstAttribute="top" secondItem="8na-7A-dEr" secondAttribute="top" id="Jqf-Rd-vgJ"/>
                             <constraint firstAttribute="bottom" secondItem="rU8-Fn-Le1" secondAttribute="bottom" id="KwU-eX-nNh"/>
                             <constraint firstItem="8na-7A-dEr" firstAttribute="trailing" secondItem="FLJ-uq-OLS" secondAttribute="trailing" id="Vk0-ks-AAV"/>
-                            <constraint firstItem="8na-7A-dEr" firstAttribute="trailing" secondItem="2Kb-QS-wgV" secondAttribute="trailing" id="Z2R-n7-UMO"/>
-                            <constraint firstItem="8na-7A-dEr" firstAttribute="bottom" secondItem="2Kb-QS-wgV" secondAttribute="bottom" id="jXi-Ja-ung"/>
-                            <constraint firstItem="2Kb-QS-wgV" firstAttribute="leading" secondItem="8na-7A-dEr" secondAttribute="leading" id="sNd-Eq-aMK"/>
                             <constraint firstItem="rU8-Fn-Le1" firstAttribute="top" secondItem="FLJ-uq-OLS" secondAttribute="bottom" id="vp5-Gw-M0E"/>
-                            <constraint firstItem="2Kb-QS-wgV" firstAttribute="top" secondItem="3t5-cd-nZI" secondAttribute="topMargin" id="w8I-4S-EET"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8na-7A-dEr"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="rU8-Fn-Le1" id="WSl-Ie-vqC"/>
                         <outlet property="flowLayout" destination="ze1-5F-wGN" id="eHj-CX-xbz"/>
-                        <outlet property="loaderView" destination="2Kb-QS-wgV" id="6HE-0k-lxQ"/>
                         <outlet property="topView" destination="FLJ-uq-OLS" id="Ffl-4s-jZo"/>
                         <segue destination="CAc-Lv-kAV" kind="show" identifier="showFollowers" id="KyL-Zg-VlU"/>
                         <segue destination="lxp-JM-fT4" kind="show" identifier="showFollowing" id="qaJ-rm-qdc"/>
@@ -76,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZW9-we-VRe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1187" y="861"/>
+            <point key="canvasLocation" x="1186.9565217391305" y="860.49107142857144"/>
         </scene>
         <!--List-->
         <scene sceneID="Gg1-C0-uj7">

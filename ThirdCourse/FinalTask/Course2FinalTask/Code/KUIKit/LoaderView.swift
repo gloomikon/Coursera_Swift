@@ -14,6 +14,13 @@ class LoaderView: UIView {
 
     // MARK: - Init
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+
+        loadingIndicator.startAnimating()
+    }
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()

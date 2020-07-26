@@ -21,18 +21,14 @@ class ProfileViewController: BaseViewController {
             collectionView.delegate = self
         }
     }
-    @IBOutlet var loaderView: LoaderView! {
-        didSet {
-            loaderView.isHidden = true
-        }
-    }
 
     @IBOutlet var flowLayout: UICollectionViewFlowLayout!
 
     // MARK: = Properties
 
     var userId: User.Identifier?
-    var posts: [Post]?
+    var user: User!
+    var posts: [Post] = []
 
     private let segueHandler = SegueHandler()
     private let cellId = String(describing: PostCell.self)
@@ -42,18 +38,18 @@ class ProfileViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loaderView.isHidden = false
+        KDataProvider.showLoaderView()
         if let userId = userId {
-            setAppearance(with: userId)
+            setAppearance(with: userId, vcWasPushed: true)
         }
         else {
             KDataProvider.currentUser()
                 .onSuccess { [weak self] user in
                     self?.userId = user.id
-                    self?.setAppearance(with: user.id)
+                    self?.setAppearance(with: user.id, vcWasPushed: false)
             }
             .onFailure { [weak self] error in
-                self?.loaderView.isHidden = true
+                KDataProvider.hideLoaderView()
                 self?.showAlert()
             }
         }
@@ -63,7 +59,29 @@ class ProfileViewController: BaseViewController {
 
     // MARK: - Functions
 
-    private func setAppearance(with userId: User.Identifier) {
+    func updatePosts() {
+        guard let  userId = userId else {
+            return
+        }
+        KDataProvider.findPosts(by: userId)
+            .onSuccess { [weak self] posts in
+                self?.posts = posts
+                self?.collectionView.reloadData()
+        }
+    }
+
+    func updateUserInfo() {
+        KDataProvider.currentUser()
+            .onSuccess { [weak self] user in
+                self?.userId = user.id
+                self?.topView.configure(with: .init(from: user,
+                                                   isUserCurrent: true)
+                )
+        }
+        .onFailure { error in }
+    }
+
+    private func setAppearance(with userId: User.Identifier, vcWasPushed: Bool) {
         KDataProvider.user(with: userId)
             .zip(KDataProvider.findPosts(by: userId))
             .onSuccess { [weak self] user, posts in
@@ -71,19 +89,26 @@ class ProfileViewController: BaseViewController {
                     return
                 }
 
-                self.loaderView.isHidden = true
+                KDataProvider.hideLoaderView()
+                self.user = user
                 self.navigationItem.title = user.username
                 self.flowLayout.minimumLineSpacing = .zero
                 self.flowLayout.minimumInteritemSpacing = .zero
                 self.flowLayout.itemSize = CGSize(width: self.view.bounds.size.width / 3, height: self.view.bounds.size.width / 3)
-                self.topView.configure(with: user)
+                self.topView.configure(with: .init(from: user,
+                                                   isUserCurrent: UserSession.shared.currentUser.map { $0.id == userId } ?? false)
+                )
 
                 self.posts = posts
                 self.collectionView.reloadData()
         }
         .onFailure { [weak self] error in
-            self?.loaderView.isHidden = true
-            self?.showAlert()
+            KDataProvider.hideLoaderView()
+            self?.showAlert() { [weak self] _ in
+                if vcWasPushed {
+                    self?.dismiss(animated: true)
+                }
+            }
         }
     }
 }
@@ -91,6 +116,31 @@ class ProfileViewController: BaseViewController {
 // MARK: - ProfileTopViewDelegate
 
 extension ProfileViewController: ProfileTopViewDelegate {
+    func handleFollowButtonTap() {
+        guard let userId = userId else {
+            return
+        }
+
+        (user.currentUserFollowsThisUser ? KDataProvider.unfollow(userId) : KDataProvider.follow(userId))
+            .onSuccess { [weak self] user in
+                self?.user = user
+                if let viewController = self?.tabBarController?.viewControllers?[2].children.first as? ProfileViewController {
+                    viewController.updateUserInfo()
+                }
+        }
+        .onFailure { [weak self] error in
+            self?.showAlert()
+        }
+
+        topView.configure(with: .init(avatar: user.avatar,
+                                      fullName: user.fullName,
+                                      followedByCount: user.currentUserFollowsThisUser ? user.followedByCount - 1 : user.followedByCount + 1,
+                                      followsCount: user.followsCount,
+                                      currentUserFollowsThisUser: !user.currentUserFollowsThisUser,
+                                      isUserCurrent: false)
+        )
+    }
+
     func openFollowers() {
         guard let userId = userId else {
             return
@@ -126,12 +176,11 @@ extension ProfileViewController: UICollectionViewDelegate { }
 
 extension ProfileViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts?.count ?? 0
+        return posts.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let posts = posts,
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? PostCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? PostCell else {
             return UICollectionViewCell()
         }
 

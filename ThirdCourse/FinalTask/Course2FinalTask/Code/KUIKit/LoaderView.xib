@@ -20,10 +20,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsd-ZF-0RK">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8q6-Rs-pnl">
-                            <rect key="frame" x="197" y="399" width="20" height="20"/>
+                            <rect key="frame" x="197" y="438" width="20" height="20"/>
                         </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -35,10 +35,10 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="gsd-ZF-0RK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Kfl-AB-ksh"/>
+                <constraint firstItem="gsd-ZF-0RK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kfl-AB-ksh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gsd-ZF-0RK" secondAttribute="trailing" id="MWq-pt-0A8"/>
                 <constraint firstItem="gsd-ZF-0RK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QtC-F0-EdL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gsd-ZF-0RK" secondAttribute="bottom" id="aMt-IQ-e4V"/>
+                <constraint firstAttribute="bottom" secondItem="gsd-ZF-0RK" secondAttribute="bottom" id="aMt-IQ-e4V"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

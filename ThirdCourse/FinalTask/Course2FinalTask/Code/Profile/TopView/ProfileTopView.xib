@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="avatarImageView" destination="2yv-xs-8gk" id="tl0-ek-VBF"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="asJ-ca-7Xd"/>
+                <outlet property="followButton" destination="dd4-HP-jV4" id="GuL-Zf-yNI"/>
                 <outlet property="followedByCountLabel" destination="NXs-dR-2nZ" id="NFl-zq-LZU"/>
                 <outlet property="followsCountLabel" destination="gZa-8D-99r" id="gnx-P1-NiI"/>
                 <outlet property="fullNameLabel" destination="hFz-JE-YOf" id="gdz-sV-wQB"/>
@@ -46,6 +47,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd4-HP-jV4">
+                    <rect key="frame" x="462" y="8" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="followButtonTapped:" destination="-1" eventType="touchUpInside" id="xq1-pN-Tm1"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -53,11 +61,13 @@
                 <constraint firstAttribute="bottom" secondItem="2yv-xs-8gk" secondAttribute="bottom" constant="8" id="E8Z-ck-GDV"/>
                 <constraint firstItem="hFz-JE-YOf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="E9M-bE-LFo"/>
                 <constraint firstItem="2yv-xs-8gk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Kv4-zq-CDp"/>
+                <constraint firstItem="dd4-HP-jV4" firstAttribute="trailing" secondItem="gZa-8D-99r" secondAttribute="trailing" id="VRa-mx-Vcv"/>
                 <constraint firstAttribute="bottom" secondItem="gZa-8D-99r" secondAttribute="bottom" constant="8" id="Wsh-vq-l0o"/>
                 <constraint firstItem="NXs-dR-2nZ" firstAttribute="leading" secondItem="2yv-xs-8gk" secondAttribute="trailing" constant="8" id="hEc-XO-grP"/>
                 <constraint firstItem="hFz-JE-YOf" firstAttribute="leading" secondItem="2yv-xs-8gk" secondAttribute="trailing" constant="8" id="hIj-Lb-k2t"/>
                 <constraint firstItem="2yv-xs-8gk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="l3k-em-jfi"/>
                 <constraint firstAttribute="trailing" secondItem="gZa-8D-99r" secondAttribute="trailing" constant="16" id="q0k-I8-nNk"/>
+                <constraint firstItem="dd4-HP-jV4" firstAttribute="top" secondItem="hFz-JE-YOf" secondAttribute="top" id="yOp-Er-PCc"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

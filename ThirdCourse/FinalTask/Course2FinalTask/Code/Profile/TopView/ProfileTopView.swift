@@ -4,6 +4,27 @@ import DataProvider
 protocol ProfileTopViewDelegate: class {
     func openFollowers()
     func openFollowings()
+    func handleFollowButtonTap()
+}
+
+struct ProfileTopViewViewState {
+    let avatar: UIImage?
+    let fullName: String
+    let followedByCount: Int
+    let followsCount: Int
+    let currentUserFollowsThisUser: Bool
+    let isUserCurrent: Bool
+}
+
+extension ProfileTopViewViewState {
+    init(from user: User, isUserCurrent: Bool) {
+        self.avatar = user.avatar
+        self.fullName = user.fullName
+        self.followedByCount = user.followedByCount
+        self.followsCount = user.followsCount
+        self.currentUserFollowsThisUser = user.currentUserFollowsThisUser
+        self.isUserCurrent = isUserCurrent
+    }
 }
 
 class ProfileTopView: UIView {
@@ -21,6 +42,17 @@ class ProfileTopView: UIView {
     @IBOutlet var fullNameLabel: UILabel! {
         didSet {
             fullNameLabel.font = .systemFont(ofSize: 14)
+        }
+    }
+
+    @IBOutlet var followButton: UIButton! {
+        didSet {
+            followButton.isHidden = true
+            followButton.backgroundColor = UIColor(red: 0 / 255, green: 150 / 255, blue: 255 / 255, alpha: 1)
+            followButton.titleLabel?.font = .systemFont(ofSize: 15)
+            followButton.setTitleColor(.white, for: .normal)
+            followButton.contentEdgeInsets = .init(top: 6, left: 6, bottom: 6, right: 6)
+            followButton.layer.cornerRadius = 6
         }
     }
 
@@ -67,11 +99,14 @@ class ProfileTopView: UIView {
 
     // MARK: - Configurations
 
-    func configure(with user: User) {
-        avatarImageView.image = user.avatar
-        fullNameLabel.text = user.fullName
-        followedByCountLabel.text = "Followers: \(user.followedByCount)"
-        followsCountLabel.text = "Following: \(user.followsCount)"
+    func configure(with viewState: ProfileTopViewViewState) {
+        avatarImageView.image = viewState.avatar
+        fullNameLabel.text = viewState.fullName
+        followedByCountLabel.text = "Followers: \(viewState.followedByCount)"
+        followsCountLabel.text = "Following: \(viewState.followsCount)"
+
+        followButton.setTitle(viewState.currentUserFollowsThisUser ? "Unfollow" : "Follow", for: .normal)
+        followButton.isHidden = viewState.isUserCurrent
     }
 
     // MARK: - Actions
@@ -82,5 +117,9 @@ class ProfileTopView: UIView {
 
     @objc private func followsCountLabelWasTapped() {
         delegate?.openFollowings()
+    }
+
+    @IBAction func followButtonTapped(_ sender: Any) {
+        delegate?.handleFollowButtonTap()
     }
 }
